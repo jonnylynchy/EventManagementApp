@@ -15,10 +15,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: EventManagementApp_development
+  database: eventmanagementapp_development
   pool: 5
   username: EventManagementApp
-  password:
+  password: <%= ENV['APP_USER_POSTGRES_PASSWORD'] %>
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -41,15 +41,15 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: EventManagementApp_test
+  database: eventmanagementapp_test
   pool: 5
   username: EventManagementApp
-  password:
+  password: <%= ENV['APP_USER_POSTGRES_PASSWORD'] %>
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: EventManagementApp_production
+  database: eventmanagementapp_production
   pool: 5
   username: EventManagementApp
-  password:
+  password: <%= ENV['APP_USER_POSTGRES_PASSWORD'] %>
