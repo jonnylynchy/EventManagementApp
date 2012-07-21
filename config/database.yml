@@ -44,7 +44,7 @@ test:
   database: eventmanagementapp_test
   pool: 5
   username: EventManagementApp
-  password: <%= ENV['EVENT_APP_USER_POSTGRES_PASSWORD'] %>
+  password: '$NtheBank32'
 
 production:
   adapter: postgresql
