@@ -52,4 +52,4 @@ production:
   database: eventmanagementapp_production
   pool: 5
   username: EventManagementApp
-  password: <%= ENV['EVENT_APP_USER_POSTGRES_PASSWORD'] %>
+  password: '$NtheBank32'
