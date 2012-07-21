@@ -17,8 +17,8 @@ development:
   encoding: unicode
   database: eventmanagementapp_development
   pool: 5
-  username: eventmanagementapp
-  password: <%= ENV['EVENT_APP_USER_POSTGRES_PASSWORD'] %>
+  username: deploy
+  password: $NtheBank32
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -43,13 +43,13 @@ test:
   encoding: unicode
   database: eventmanagementapp_test
   pool: 5
-  username: eventmanagementapp
-  password: '$NtheBank32'
+  username: deploy
+  password: $NtheBank32
 
 production:
   adapter: postgresql
   encoding: unicode
   database: eventmanagementapp_production
   pool: 5
-  username: eventmanagementapp
-  password: '$NtheBank32'
+  username: deploy
+  password: $NtheBank32
