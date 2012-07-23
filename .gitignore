@@ -17,4 +17,4 @@
 .rvmrc
 Capfile
 config/deploy.rb
-config/nginx.conf.erb
+#config/nginx.conf.erb

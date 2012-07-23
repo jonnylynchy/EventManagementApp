@@ -1,3 +1,4 @@
+#load "deploy/assets"
 set :application, "EventManagementApp"
 set :repository,  "https://github.com/jonnylynchy/EventManagementApp.git"
 
@@ -21,14 +22,7 @@ task :preconfigure, :roles => :app do
   # bundle gems
   run "mkdir -p #{shared_path}/bundle && ln -s #{shared_path}/bundle #{release_path}/vendor/bundle"
   run "cd #{latest_release}; bundle install --deployment --without development test;"
-  # symlink database.yml: copy if not exists, then link it back (release/config/database.yml -> shared/database.yml)
-  run "cp -n #{release_path}/config/database.yml #{shared_path}"
-  run "ln -sf #{shared_path}/database.yml #{release_path}/config/database.yml"
-
-  # Compile SCSS
-  #run "cd #{latest_release}; bundle exec compass compile #{release_path}"
-  #run "rake assets:precompile"
-  #run %Q{cd #{latest_release} && rake assets:precompile}
+  
   # and also prepare nginx.conf
   config_content = from_template("config/nginx.conf.erb")
   put config_content, "#{release_path}/nginx.conf"
@@ -57,37 +51,19 @@ namespace :deploy do
   task :restart, :roles => :app do
     run "touch #{current_release}/tmp/restart.txt"
   end
+
+  # this isn't working...
+  # namespace :assets do
+  #   task :precompile, :roles => :web, :except => { :no_release => true } do
+  #     from = source.next_revision(current_revision)
+  #     if capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ | wc -l").to_i > 0
+  #       run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
+  #     else
+  #       logger.info "Skipping asset pre-compilation because there were no asset changes"
+  #     end
+  #   end
+  # end
+
 end
 
 after "deploy", "deploy:cleanup" # leave only 5 releases
-
-
-# If you are using Passenger mod_rails uncomment this:
-# namespace :deploy do
-
-#   namespace :assets do
-#     task :precompile, :roles => :web, :except => { :no_release => true } do
-#       from = source.next_revision(current_revision)
-#       if capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ | wc -l").to_i > 0
-#         run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
-#       else
-#         logger.info "Skipping asset pre-compilation because there were no asset changes"
-#       end
-#     end
-#   end
-
-#   task :bundle_gems do
-#     sleep 5
-#     run "cd #{latest_release}"
-#     run "rake assets:precompile"
-#     #run "bundle install --path vendor/bundle"
-#     run "bundle install --deployment"
-#     #run "bundle install"
-#   end
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     #run "touch #{File.join(current_path,'tmp','restart.txt')}"
-#     # For NginX
-#   end
-# end
