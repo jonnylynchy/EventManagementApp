@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  first_name: MyString
+  last_name: MyString
+  gender: MyString
+  grade_completed: 1
+  dob: 2012-07-23
+  special_needs: MyText
+
+two:
+  user_id: 1
+  first_name: MyString
+  last_name: MyString
+  gender: MyString
+  grade_completed: 1
+  dob: 2012-07-23
+  special_needs: MyText

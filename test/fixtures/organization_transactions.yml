@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  organization_id: 1
+  organization_payment_detail_id: 1
+  amount: 9.99
+  transaction_type_id: 1
+
+two:
+  organization_id: 1
+  organization_payment_detail_id: 1
+  amount: 9.99
+  transaction_type_id: 1

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  event_id: 1
+  volunteer_id: 1
+  classroom_id: 1
+
+two:
+  event_id: 1
+  volunteer_id: 1
+  classroom_id: 1

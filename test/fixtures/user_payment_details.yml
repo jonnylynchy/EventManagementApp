@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  payment_type: MyString
+  hashed_cc_number: MyString
+  salt: MyString
+  cvv: MyString
+
+two:
+  user_id: 1
+  payment_type: MyString
+  hashed_cc_number: MyString
+  salt: MyString
+  cvv: MyString

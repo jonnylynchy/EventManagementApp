@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  organization_id: 1
+  subscription_type_id: 1
+  start_date: 2012-07-23
+  end_date: 2012-07-23
+  is_auto_renew: false
+
+two:
+  organization_id: 1
+  subscription_type_id: 1
+  start_date: 2012-07-23
+  end_date: 2012-07-23
+  is_auto_renew: false

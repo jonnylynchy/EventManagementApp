@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  organization_id: 1
+  title: MyString
+  description: MyText
+  start_date_time: 2012-07-23 17:07:35
+  end_date_time: 2012-07-23 17:07:35
+  maximum_registrations: 1
+
+two:
+  organization_id: 1
+  title: MyString
+  description: MyText
+  start_date_time: 2012-07-23 17:07:35
+  end_date_time: 2012-07-23 17:07:35
+  maximum_registrations: 1

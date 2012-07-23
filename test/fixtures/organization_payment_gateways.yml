@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  organization_id: 1
+  payment_gateway_type_id: 1
+  is_test_mode: false
+  is_active: false
+  login: MyString
+  user: MyString
+  hashed_password: MyString
+  salt: MyString
+
+two:
+  organization_id: 1
+  payment_gateway_type_id: 1
+  is_test_mode: false
+  is_active: false
+  login: MyString
+  user: MyString
+  hashed_password: MyString
+  salt: MyString

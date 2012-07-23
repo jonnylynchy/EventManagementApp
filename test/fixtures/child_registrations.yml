@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  child_id: 1
+  event_id: 1
+  classroom_id: 1
+  is_active: false
+  user_transaction_id: 1
+
+two:
+  child_id: 1
+  event_id: 1
+  classroom_id: 1
+  is_active: false
+  user_transaction_id: 1
