@@ -20,15 +20,15 @@ desc "Configure the application with correct database and precompile assets"
 task :preconfigure, :roles => :app do
   # bundle gems
   run "mkdir -p #{shared_path}/bundle && ln -s #{shared_path}/bundle #{release_path}/vendor/bundle"
-  run "cd #{latest_release}; bundle install --deployment --without development test"
-  run "rake assets:precompile"
+  run "cd #{latest_release}; bundle install --deployment --without development test;"
   # symlink database.yml: copy if not exists, then link it back (release/config/database.yml -> shared/database.yml)
   run "cp -n #{release_path}/config/database.yml #{shared_path}"
   run "ln -sf #{shared_path}/database.yml #{release_path}/config/database.yml"
 
   # Compile SCSS
   #run "cd #{latest_release}; bundle exec compass compile #{release_path}"
-
+  #run "rake assets:precompile"
+  #run %Q{cd #{latest_release} && rake assets:precompile}
   # and also prepare nginx.conf
   config_content = from_template("config/nginx.conf.erb")
   put config_content, "#{release_path}/nginx.conf"
