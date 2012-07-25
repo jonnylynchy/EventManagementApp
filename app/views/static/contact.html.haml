@@ -1,0 +1,24 @@
+%h1 Contact Us
+%p Fill out the information below and we'll get back to you shortly!
+- if flash[:notice]
+  .alert-message.notice
+    = flash[:notice]
+- if @contact_form.errors.any?
+  %ul.alert-message.error
+    - @contact_form.errors.full_messages.each do |msg|
+      %li #{msg}
+= form_for @contact_form, url: send_email_path do |f|
+  %div.field
+    = f.label :name
+    %br
+    = f.text_field :name
+  %div.field
+    = f.label :email
+    %br
+    = f.text_field :email
+  %div.field
+    = f.label :body
+    %br
+    = f.text_area :body
+  %div.actions
+    = f.submit

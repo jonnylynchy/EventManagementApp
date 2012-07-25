@@ -1,4 +1,8 @@
 EventManagementApp::Application.routes.draw do
+  root :to => "static#index"
+  match 'about', :to => 'static#about'
+  match 'contact', :to => 'static#contact'
+  match "/send_email/" => "static#send_email"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
