@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120723224759) do
+ActiveRecord::Schema.define(:version => 20120726180948) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name"
@@ -165,7 +165,7 @@ ActiveRecord::Schema.define(:version => 20120723224759) do
   end
 
   add_index "organization_transactions", ["organization_id"], :name => "index_organization_transactions_on_organization_id"
-  add_index "organization_transactions", ["organization_payment_detail_id"], :name => "by_payment_detail", :unique => true
+  add_index "organization_transactions", ["organization_payment_detail_id"], :name => "by_payment_detail"
 
   create_table "organizations", :force => true do |t|
     t.string   "title"

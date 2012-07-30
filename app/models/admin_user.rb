@@ -1,5 +1,5 @@
 class AdminUser < ActiveRecord::Base
-  attr_accessible :email, :first_name, :hashed_password, :last_name, :organization_id, :salt
+  attr_accessible :email, :first_name, :last_name, :organization_id
 
   #associations
   belongs_to :organization
@@ -60,7 +60,7 @@ class AdminUser < ActiveRecord::Base
     #whenever :password has a value, hashing is needed
     unless password.blank?
       # always use "self" when assigning values
-      self.salt = AdminUser.make_salt(username) if salt.blank?
+      self.salt = AdminUser.make_salt(email) if salt.blank?
       self.hashed_password = AdminUser.hash_with_salt(password, salt)
     end
   end

@@ -11,8 +11,8 @@ test:
   encoding: unicode
   database: eventmanagementapp_test
   pool: 5
-  username: deploy
-  password: <%= ENV['EVENT_APP_USER_POSTGRES_PASSWORD'] %>
+  username: jonnylynchy
+  password: 
 
 production:
   adapter: postgresql

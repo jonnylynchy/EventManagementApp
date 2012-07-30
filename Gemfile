@@ -19,6 +19,17 @@ gem 'jquery-rails'
 group :development do
   #gem 'rvm-capistrano'
   gem 'capistrano'
+  gem 'rails3-generators'
 end
 
+group :development, :test do
+  gem 'factory_girl_rails'
+end
 
+group :test do
+  gem 'shoulda'
+  gem "minitest", "~> 2.10.0"
+  gem "turn", "~> 0.8.3"
+  gem 'test-unit', '~> 2.0.0'  
+  gem 'autotest-rails'
+end
