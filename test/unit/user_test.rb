@@ -12,8 +12,7 @@ class UserTest < ActiveSupport::TestCase
     def teardown
       @user = nil
     end
-
-    # validation tests
+    
     should belong_to(:organization)
     should validate_presence_of(:first_name)
     should validate_presence_of(:last_name)
@@ -33,7 +32,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     should "work with password for authentication" do
-      #@password = 'blabla'
+      #@password = 'blabla' #to see fail
       assert User.authenticate(email=@user.email, password=@password), "password did not match"
     end
 

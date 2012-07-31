@@ -2,7 +2,6 @@
 
 FactoryGirl.define do
   factory :organization do
-      sequence(:id) { |i| i}
       sequence(:contact_email) { |i| "soandso_#{i}@organization.com"}
       contact_phone "312-444-5567"
       description "This is an organization."

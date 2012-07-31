@@ -1,8 +1,15 @@
 EventManagementApp::Application.routes.draw do
+
   root :to => "static#index"
   match 'about', :to => 'static#about'
   match 'contact', :to => 'static#contact'
   match "/send_email/" => "static#send_email"
+
+  resources :sessions, only: [:new, :create, :destroy]
+
+  match '/signup',  to: 'admin_users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

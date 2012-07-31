@@ -1,0 +1,21 @@
+.container.top-bar.home-border
+  .attached
+    .name.left
+      %span
+        = link_to 'LightPost Events', root_path
+    %ul.right.nav-bar
+      %li
+        = link_to 'home', root_path
+      %li
+        = link_to 'about', about_path
+      %li
+        = link_to 'contact', contact_path
+      - if session[:user].nil?
+        %li.has-flyout
+          %a{href: 'javscript:void(0)'}
+            Sign in
+          .flyout.large.right
+            = render partial: 'layouts/signin'
+      - else
+        %li
+          = link_to 'Sign out >', 'signout'

@@ -1,0 +1,10 @@
+%form{ :action => "", :method => "post"}
+= form_for :session, url: sessions_path do |f|
+  //%label{:for => "email"} Email:
+  = f.text_field :email, :placeholder => "Email"
+  = f.password_field :password, :placeholder => "Password"
+  = f.submit "Sign in", class: "button"
+  %p 
+  = link_to "Don't have an account?", signup_path
+  %br
+  = link_to "Forgot your password?", signup_path

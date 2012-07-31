@@ -5,8 +5,33 @@
     %meta{:charset => "utf-8"}
     %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
+    %link{:rel=>'stylesheet', :href=>'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800', :type => "text/css"} 
     = stylesheet_link_tag :application, :media => "all"
     = javascript_include_tag :application
     = csrf_meta_tags
   %body
-    = yield
+    = render partial: 'layouts/navigation'
+    .container
+      .row
+        .twelve.columns
+          = render partial: 'layouts/messages'
+          %h3.header
+            = "#{@page_title}" if @page_title
+        .eight.columns
+          = yield
+        .four.columns
+          = render partial: 'layouts/static_sidebar'
+    #footer
+      .row
+        .four.columns
+          &copy; 
+          = "#{Time.new.year}"
+          Flux Interactive LLC 
+        .eight.columns
+          %ul.link-list.right
+            %li
+              = link_to 'home', root_path
+            %li
+              = link_to 'about', about_path
+            %li
+              = link_to 'contact', contact_path

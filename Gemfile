@@ -28,8 +28,9 @@ end
 
 group :test do
   gem 'shoulda'
-  gem "minitest", "~> 2.10.0"
-  gem "turn", "~> 0.8.3"
-  gem 'test-unit', '~> 2.0.0'  
+  gem 'minitest'
+  gem 'turn'
+  gem 'test-unit'
   gem 'autotest-rails'
+  gem 'mocha'
 end

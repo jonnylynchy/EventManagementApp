@@ -1,0 +1,12 @@
+- if !flash[:message].nil?
+  .alert-box
+    = flash[:message]
+    %a{href:"", class:"close"} &times;
+- if !flash[:success].nil?
+  .alert-box.success
+    = flash[:success]
+    %a{href:"", class:"close"} &times;
+- if !flash[:error].nil?
+  .alert-box.alert
+    = flash[:error]
+    %a{href:"", class:"close"} &times;

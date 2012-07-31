@@ -1,0 +1,77 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+body, html{
+  margin:0;
+  padding:0;
+}
+
+.top-bar li {
+margin-bottom: 0;
+line-height: 46px;
+}
+
+.top-bar .nav-bar {
+  height: 45px;
+  background: none;
+}
+
+.top-bar .nav-bar .flyout {
+  top: 45px;
+}
+
+.top-bar .attached > ul > li form {
+  height:auto;
+  border:none;
+  line-height: 15px;
+}
+
+.flyout.large {
+  width: 350px;
+}
+
+.flyout {
+  color:#333;
+}
+
+.flyout a:link, .flyout a:visited {
+  color:#2284A1;
+} 
+
+h3.header {
+  border-bottom:1px solid #333;
+  padding: 3px 0 5px 0;
+}
+
+#footer {
+  padding:10px;
+  margin-top:44px;
+  margin-bottom:0;
+  color:#fff;
+  background:#333;
+}
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+

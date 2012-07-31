@@ -12,4 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
+//= require jquery.foundation.accordion
+//= require jquery.foundation.alerts
+//= require jquery.foundation.buttons
+//= require jquery.foundation.forms
+//= require jquery.foundation.navigation
+//= require jquery.foundation.orbit
+//= require jquery.foundation.reveal
+//= require jquery.foundation.tabs
+//= require jquery.foundation.tooltips
+//= require jquery.placeholder
+//= require modernizr.foundation
+//= require app
 //= require_tree .
