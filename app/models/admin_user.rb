@@ -33,7 +33,9 @@ class AdminUser < ActiveRecord::Base
   end
 
   def self.authenticate(email="", password="")
-    user = AdminUser.find_by_email(email)
+    #user = AdminUser.find_by_email(email)
+    user = AdminUser.where("email = ?", email).first
+    #throw user
     if user && user.password_match?(password)
       return user
     else
