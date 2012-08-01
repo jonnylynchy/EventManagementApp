@@ -1,18 +1,12 @@
 development:
-  adapter: postgresql
-  encoding: unicode
+  adapter: sqlite3
   database: eventmanagementapp_development
-  pool: 5
-  username: deploy
-  password: <%= ENV['EVENT_APP_USER_POSTGRES_PASSWORD'] %>
+  host: localhost
 
 test:
-  adapter: postgresql
-  encoding: unicode
+  adapter: sqlite3
   database: eventmanagementapp_test
-  pool: 5
-  username: jonnylynchy
-  password: 
+  host: localhost
 
 production:
   adapter: postgresql

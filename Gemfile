@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
-gem 'pg'
+
+group :production do
+  gem 'pg'
+end
 
 
 # Gems used only for assets and not required
@@ -24,6 +27,7 @@ end
 
 group :development, :test do
   gem 'factory_girl_rails'
+  gem 'sqlite3'
 end
 
 group :test do
