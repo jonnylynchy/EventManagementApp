@@ -1,0 +1,14 @@
+.row
+	- @org_sub_types.each do |type|
+		.columns.four
+			.panel.subscription.radius
+				%h5 
+					.left
+						= type.title
+					.right
+						= number_to_currency(type.price)
+					.clear
+				%p
+					= type.description
+				%a{class: 'button right small bottom', data: {subscription_type_id: "#{type.id}"}}
+					Choose Plan

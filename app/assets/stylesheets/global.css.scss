@@ -20,3 +20,28 @@ div.field_with_errors{
 		border-color:#C60F13;
 	}
 }
+
+.actions {
+	border-top: 1px solid #333;
+	margin-top: 5px;
+	padding-top: 15px;
+}
+
+.row{
+	.columns{
+		.panel{
+			height:225px;
+			position:relative;
+			.bottom{
+				position:absolute;
+				bottom:10px;
+				right:10px;
+			}
+		}
+	}
+}
+
+.clear {
+  clear: both;
+  visibility: hidden
+}

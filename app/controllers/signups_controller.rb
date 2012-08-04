@@ -45,7 +45,7 @@ class SignupsController < ApplicationController
   end
 
   def save_account
-
+    
   end
 
   def payment_details

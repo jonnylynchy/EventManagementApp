@@ -1,17 +1,9 @@
 - @page_title = "Sign up - Account Plan"
 %p Now you need to choose a plan. Complete the details below and hit "Next".
 %p
-= form_for @org_admin_user, url: '/signup/save_user' do |f|
+= form_for @org_sub, url: '/signup/save_account' do |f|
   = f.hidden_field :organization_id
-  %div.field
-    = f.text_field :first_name, placeholder: 'Your first name'
-  %div.field
-    = f.text_field :last_name, placeholder: 'Your last name'
-  %div.field
-    = f.text_field :email, placeholder: 'Your email address'
-  %div.field
-    = f.password_field :password, placeholder: 'Your preferred password'
-  %div.field
-    = f.password_field :password_confirmation, placeholder: 'confirm your password'
+  = f.hidden_field :subscription_type_id
+  = render '/signups/account_plans'
   %div.actions
     = f.submit 'Next', class: 'right button'

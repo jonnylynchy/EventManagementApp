@@ -4,4 +4,11 @@ class OrganizationSubscription < ActiveRecord::Base
   #associations
   belongs_to :organization
   belongs_to :subscription_type
+
+  #validations
+  validates_presence_of :organization
+  validates_presence_of :subscription_type
+  validates_presence_of :start_date
+  validates_presence_of :end_date
+
 end
