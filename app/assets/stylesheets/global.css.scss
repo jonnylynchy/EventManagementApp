@@ -1,0 +1,22 @@
+ul.side-nav{
+	padding:5px 0;
+	li{
+		border-bottom: 1px solid #ccc;
+		background:#efefef;
+		margin-bottom:1px;
+		padding:5px;
+	}
+	li:last-child{
+		border-bottom: none;
+	}
+	li.active{
+		background:#777;
+		color:#fff;
+	}
+}
+
+div.field_with_errors{
+	input{
+		border-color:#C60F13;
+	}
+}

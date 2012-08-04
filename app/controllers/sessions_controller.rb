@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = AdminUser.authenticate(email=params[:session][:email], password=params[:session][:password])
     if user
       # Sign the user in and redirect to the user's show page.
-      session[:user] = user
+      session[:user_id] = user.id
       flash[:success] = 'You are now signed in.'
       redirect_to :back
     else
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user] = nil
+    session[:user_id] = nil
     flash[:message] = 'You are now signed out.'
     redirect_to :back
   rescue ActionController::RedirectBackError

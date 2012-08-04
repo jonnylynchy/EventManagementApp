@@ -1,0 +1,13 @@
+.container.top-bar.home-border
+  .attached
+    .name.left
+      %span.logo
+        = link_to 'LightPost Events', root_path
+    %ul.right.nav-bar
+      %li
+        = link_to 'home', root_path
+      %li
+        = link_to 'about', about_path
+      %li
+        = link_to 'contact', contact_path
+      = account_links

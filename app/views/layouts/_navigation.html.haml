@@ -1,7 +1,7 @@
 .container.top-bar.home-border
   .attached
     .name.left
-      %span
+      %span.logo
         = link_to 'LightPost Events', root_path
     %ul.right.nav-bar
       %li
@@ -17,5 +17,8 @@
           .flyout.large.right
             = render partial: 'layouts/signin'
       - else
-        %li
-          = link_to 'Sign out >', 'signout'
+        %li.has-flyout
+          %a{href: 'javscript:void(0)'}
+            = @current_user.organization.title
+          %ul.flyout.small.right
+            = render partial: 'layouts/account'

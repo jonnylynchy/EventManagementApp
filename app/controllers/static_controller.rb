@@ -22,7 +22,7 @@ class StaticController < ApplicationController
         errors+= msg + "<br />"
       end
       flash[:error] = errors.html_safe
-      render :contact
+      redirect_to action: 'contact'
     end
 
   end

@@ -11,5 +11,6 @@
  *= require_self
  *= require foundation
  *= require foundation.top-bar
+ *= require global
  *= require_tree .
  */

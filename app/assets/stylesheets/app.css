@@ -29,7 +29,7 @@ line-height: 46px;
 .top-bar .attached > ul > li form {
   height:auto;
   border:none;
-  line-height: 15px;
+  
 }
 
 .flyout.large {
@@ -38,6 +38,7 @@ line-height: 46px;
 
 .flyout {
   color:#333;
+  line-height: 15px;
 }
 
 .flyout a:link, .flyout a:visited {

@@ -1,5 +1,5 @@
 class AdminUser < ActiveRecord::Base
-  attr_accessible :email, :first_name, :last_name, :organization_id
+  attr_accessible :email, :first_name, :last_name, :organization_id, :password, :password_confirmation
 
   #associations
   belongs_to :organization
@@ -18,18 +18,26 @@ class AdminUser < ActiveRecord::Base
   validates_length_of :email, maximum: 100
   validates_format_of :email, with: EMAIL_REGEX
   validates_confirmation_of :email
+  validates_confirmation_of :password
 
   # only on create, so other attributes of this user can be changed
   validates_length_of :password, within: 8..25, on: :create
 
   before_save :create_hashed_password
   after_save :clear_password
+  after_initialize :default_values
 
   scope :named, lambda {|first,last| where(:first_name => first, :last_name => last)}
   scope :sorted, order("admin_users.last_name ASC, admin_users.first_name ASC")
 
   def name
     "#{first_name} #{last_name}"     
+  end
+
+  def default_values
+    if self.new_record?
+      self.organization_id = Organization.find_by_subdomain('default').id
+    end
   end
 
   def self.authenticate(email="", password="")
@@ -55,6 +63,13 @@ class AdminUser < ActiveRecord::Base
 
   def self.hash_with_salt(password="", salt="")
     Digest::SHA1.hexdigest("Put #{salt} on the #{password}")
+  end
+
+  def self.current
+    Thread.current[:admin_user]
+  end
+  def self.current=(admin_user)
+    Thread.current[:admin_user] = admin_user
   end
 
   private

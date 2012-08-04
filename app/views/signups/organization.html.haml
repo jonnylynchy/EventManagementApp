@@ -1,0 +1,19 @@
+- @page_title = 'Sign up - Organization Information'
+%p First we need some basic information about your Organization. Complete the details below and hit "Next".
+%p
+= form_for @org, url: '/signup/save_organization' do |f|
+  %div.field
+    = f.text_field :title, placeholder: 'The name of your company'
+  %div.field.row.collapse
+    .eight.mobile-three.columns
+      = f.text_field :subdomain, placeholder: 'CompanyName'
+    .four.mobile-one.columns
+      %span.postfix .LightPostEvents.com
+  %div.field
+    = f.text_field :contact_email, placeholder: 'A contact email address'
+  %div.field
+    = f.text_field :contact_phone, placeholder: 'Your company''s phone number'
+  %div.field
+    = f.text_area :description, style: 'height:150px;', placeholder: 'A description of your company'
+  %div.actions
+    = f.submit 'Next', class: 'right button'

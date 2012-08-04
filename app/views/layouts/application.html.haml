@@ -10,17 +10,23 @@
     = javascript_include_tag :application
     = csrf_meta_tags
   %body
-    = render partial: 'layouts/navigation'
+    = render partial: 'shared/navigation'
     .container
       .row
         .twelve.columns
-          = render partial: 'layouts/messages'
+          = render partial: 'shared/messages'
           %h3.header
             = "#{@page_title}" if @page_title
-        .eight.columns
-          = yield
-        .four.columns
-          = render partial: 'layouts/static_sidebar'
+        - if (request.fullpath == '/contact' || request.fullpath == '/about' || request.fullpath == '/')
+          .eight.columns
+            = yield
+          .four.columns
+            = render partial: 'shared/static_sidebar'
+        - else
+          .three.columns
+            = render partial: 'shared/signup_sidebar'
+          .nine.columns
+            = yield
     #footer
       .row
         .four.columns
