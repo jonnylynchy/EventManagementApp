@@ -8,7 +8,9 @@
 					.right
 						= number_to_currency(type.price)
 					.clear
+				%p{id:type.id,class:'featureList'}
+					= type.feature_list
 				%p
 					= type.description
 				%a{class: 'button right small bottom', data: {subscription_type_id: "#{type.id}"}}
-					Choose Plan
+					Choose To View Details

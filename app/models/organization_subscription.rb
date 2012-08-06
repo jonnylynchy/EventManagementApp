@@ -11,4 +11,13 @@ class OrganizationSubscription < ActiveRecord::Base
   validates_presence_of :start_date
   validates_presence_of :end_date
 
+  #callbacks
+  after_initialize :default_values
+
+  def default_values
+    if self.new_record?
+      self.is_auto_renew = true
+    end
+  end
+
 end

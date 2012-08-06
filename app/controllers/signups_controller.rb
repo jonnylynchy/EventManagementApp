@@ -39,13 +39,25 @@ class SignupsController < ApplicationController
   end
 
   def account_plan
-  	@org_sub = OrganizationSubscription.new(organization_id: @current_user.organization_id)
+  	@org_sub = OrganizationSubscription.new({
+      organization_id: @current_user.organization_id,
+      start_date: Date.today,
+      end_date: 1.month.from_now
+    })
     @org_sub_types = SubscriptionType.all
     @signup_step = 3
   end
 
   def save_account
-    
+    @org_sub = OrganizationSubscription.new(params[:organization_subscription])
+    @signup_step = 3
+    if @org_sub.save
+      flash[:success] = "Your account plan was saved."
+      redirect_to '/signup/payment_details'
+    else
+      flash[:error] = error_messages_for(@org_sub).html_safe
+      render 'account_plan'
+    end
   end
 
   def payment_details

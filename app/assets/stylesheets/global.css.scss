@@ -41,7 +41,31 @@ div.field_with_errors{
 	}
 }
 
+.subscription{
+	p.featureList{
+		display:none;
+	}
+}
+
+.check{
+	label{
+		display: inline;
+	}
+}
+
 .clear {
   clear: both;
   visibility: hidden
+}
+
+.subPointer{
+	background: url(image_path("subPointer_bg.gif")) no-repeat 0 0;
+	height: 18px;
+	margin-top:-10px;
+	display:none;
+}
+
+.subscriptionDetails{
+	display:none;
+	height: auto !important;
 }

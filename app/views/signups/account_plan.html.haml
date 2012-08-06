@@ -1,9 +1,19 @@
 - @page_title = "Sign up - Account Plan"
-%p Now you need to choose a plan. Complete the details below and hit "Next".
+%p Now you need to choose a plan. Choose a plan to see details. Then hit "Next".
 %p
 = form_for @org_sub, url: '/signup/save_account' do |f|
   = f.hidden_field :organization_id
   = f.hidden_field :subscription_type_id
+  = f.hidden_field :start_date
+  = f.hidden_field :end_date
   = render '/signups/account_plans'
+  .subPointer
+  .subscriptionDetails.panel.radius
+    %h5 Plan Features
+    %p
   %div.actions
-    = f.submit 'Next', class: 'right button'
+    .left.check
+      = f.check_box :is_auto_renew
+      = f.label :is_auto_renew, "This plan will auto renew on #{1.months.from_now.strftime('%A %B %d')}"
+    .right
+      = f.submit 'Next', class: 'right button'
