@@ -7,8 +7,6 @@ $(document).ready ->
 			lines = featureList.split("|")
 			centerPoint = $(this).parent().width()/2 + $(this).parent().parent().position().left
 			console.log(centerPoint)
-			# $('.subscriptionDetails').hide()
-			# $('.subPointer').hide()
 			$('.subscription').removeClass('callout')
 			$('.subscription .button').text('Choose To View Details').removeAttr('disabled')
 			$(this).text('Click Next').attr('disabled', 'disabled')
@@ -22,8 +20,4 @@ $(document).ready ->
 			  $(".subPointer").show()
 			  $(".subPointer").animate
 			    "background-position-x": centerPoint + "px"
-			    "background-position-y": "0"
-			  , 300, "linear"
-
-			
-			
+			    "background-position-y": "0", 300, "linear"

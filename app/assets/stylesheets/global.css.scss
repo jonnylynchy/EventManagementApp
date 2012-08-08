@@ -1,3 +1,7 @@
+// Icon Positions
+//$checkPos: 365px 365px;
+$checkPos: 0px -10px;
+
 ul.side-nav{
 	padding:5px 0;
 	li{
@@ -68,4 +72,11 @@ div.field_with_errors{
 .subscriptionDetails{
 	display:none;
 	height: auto !important;
+	p{
+		div{
+			padding-left: 45px;
+			padding-bottom: 5px;
+			background:url(image_path("icons/icons-100.png")) $checkPos no-repeat;
+		}
+	}
 }

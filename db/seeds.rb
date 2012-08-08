@@ -12,7 +12,7 @@ subscription_types = SubscriptionType.create([
 		title: 'Lite',
 		description: 'This account type is free and allows you basic features to manage your events.',
 		price: 0.00,
-		feature_list: 'Create and Manage Adult Events (Up to 5 Events)|Create and Manage Kids and Youth Events|Accept and Manage Attendee Registrations for Adult Events|Accept and Manage Attendee Registrations for Kid and Youth Events|Create and Manage Classrooms|Assign Kids to Classrooms|View and Manage Attendance Rolls'
+		feature_list: 'Create and Manage Adult Events (Up to 5 Active Events)|Create and Manage Kids and Youth Events|Accept and Manage Attendee Registrations for Adult Events|Accept and Manage Attendee Registrations for Kid and Youth Events|Create and Manage Classrooms|Assign Kids to Classrooms|View and Manage Attendance Rolls'
 	},
 	{
 		title: 'Standard',
