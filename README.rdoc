@@ -4,7 +4,7 @@ This is an event management app specifically tailored for churches.
 
 As a subscription based service, this will have multiple account types which will provide the following functionality for each account type:
 
-  - Lite
+- Lite
   Create and Manage Adult Events (Up to 5 Events)
   Create and Manage Kids and Youth Events
   Accept and Manage Attendee Registrations for Adult Events
@@ -12,7 +12,7 @@ As a subscription based service, this will have multiple account types which wil
   Create and Manage Classrooms
   Assign Kids to Classrooms
   View and Manage Attendance Rolls
-  - Standard
+- Standard
   Create and Manage Adult Events
   Create and Manage Kids and Youth Events
   Accept and Manage Attendee Registrations for Adult Events
@@ -28,7 +28,7 @@ As a subscription based service, this will have multiple account types which wil
   View and Manage Attendance Rolls
   Upload and Share Event Documents (release and medical forms) with Attendees
   Accept and Keep Record of Payment for Event Registrations
-  - Pro
+- Pro
   Create and Manage Adult Events
   Create and Manage Kids and Youth Events
   Create and Manage Event Registration Websites
