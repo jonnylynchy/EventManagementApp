@@ -12,7 +12,6 @@ As a subscription based service, this will have multiple account types which wil
   Create and Manage Classrooms
   Assign Kids to Classrooms
   View and Manage Attendance Rolls
-
 2. Standard
   Create and Manage Adult Events
   Create and Manage Kids and Youth Events
@@ -29,7 +28,6 @@ As a subscription based service, this will have multiple account types which wil
   View and Manage Attendance Rolls
   Upload and Share Event Documents (release and medical forms) with Attendees
   Accept and Keep Record of Payment for Event Registrations
-
 3. Pro
   Create and Manage Adult Events
   Create and Manage Kids and Youth Events
