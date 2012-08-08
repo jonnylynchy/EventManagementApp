@@ -28,16 +28,16 @@ As a subscription based service, this will have multiple account types which wil
             Upload and Share Event Documents (release and medical forms) with Attendees
             Accept and Keep Record of Payment for Event Registrations
 
-[Pro] Create and Manage Adult Events
-      Create and Manage Kids and Youth Events
-      Create and Manage Event Registration Websites
-      Accept and Manage Attendee Registrations for Adult Events
-      Accept and Manage Attendee Registrations for Kid and Youth Events
-      Accept and Manage Volunteer Registrations
-      Create and Manage Classrooms
-      Create and Manage Event Roles
-      Assign Volunteers To Classrooms Per Event
-      Assign Kids to Classrooms
+[Pro] Create and Manage Adult Events 
+      Create and Manage Kids and Youth Events 
+      Create and Manage Event Registration Websites 
+      Accept and Manage Attendee Registrations for Adult Events 
+      Accept and Manage Attendee Registrations for Kid and Youth Events 
+      Accept and Manage Volunteer Registrations 
+      Create and Manage Classrooms 
+      Create and Manage Event Roles 
+      Assign Volunteers To Classrooms Per Event 
+      Assign Kids to Classrooms 
       Assign Volunteers To Event Roles 
       View and Print Nametags
       View and Print Roll Sheets
